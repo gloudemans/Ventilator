@@ -1,10 +1,13 @@
-Ventilator
+# Ventilator
+
 This repository contains design artifacts for several ventilator components that could be mass produced to provide emergency ventilation of COVID-19 patients experiencing acute respiratory distress syndrome (ARDS). The designs target clinically relevant functionality for treatment of ARDS (http://www.ardsnet.org/files/ventilator_protocol_2008-07.pdf). That functionality includes mechanically assisted ventilation of the patient with air having an elevated fraction of inspired oxygen (FiO2) and the provision of controlled positive end expiratory pressure (PEEP). The designs include a pressure relief valve to protect the lungs from damage due to over pressurization (barotrauma).
 
 There are many initiatives developing ventilator solutions to address the acute need presented by the COVID-19 epidemic. This work addresses a concern that these initiatives may be immediately scalable to the degree necessary to materially contribute to patient care during the COVID--19 epidemic.
 
 An objective of this project is to propose solutions that can materially help and that can realistically scale to support hundreds of thousands of patients in a few weeks. Time is by far the most challenging constraint because most high-tech components (brushless DC motors, microcontrollers like the Raspberry pi or Arduino) cannot really be procured in sufficient volume to address the worldwide need in a near instant timeframe. To the degree possible, this project will utilize common materials like aluminum, acetal, wire, screws, and so forth that are available immediately in almost unlimited volume.
-Scenario 1
+
+## Scenario 1
+
 The unit is being deployed in a field hospital where there are on the order of 1000 patients in proximity. One potential solution includes central oxygenation and distribution of pressurized air with regulated pressure and FiO2 through one or more air plena with local taps for each patient. The patient equipment would provide adjustable regulated inspiration pressure, adjustable PEEP, and a breathing air solenoid with rate controller. In this scenario, we could choose central distribution through wide plena at low pressure or narrow plena at high pressure. If we size the plena for 100 people breathing 10 liters per minute over a 200 foot length, the flow rate is 100 liters per minute or 35 cubic feet per minute. With wide plena, we might use a pressure of 80cm H20 and desire that this not fall below 60cm H20 at the patient tap. A delta of 20cm H20 is equal to 0.79 in H20. Using this calculator (https://www.engineeringtoolbox.com/duct-friction-pressure-loss-d_444.html) we see that a 3 inch plenum has approximately the required capacity. PVC pipe is one possible plenum material that could be used for this purpose. It is available everywhere (Home Depot, Menards, Lowes, etc.) in large quantity. Three-inch PVC pipe has an actual inside diameter of 3 inches. Some other materials with 3 inch nominal size have reduce inside diameter.
 
 Nominal PVC dimensions: https://www.pvcfittingsonline.com/resource-center/pvc-pipe-dimensions-18-through-24/
