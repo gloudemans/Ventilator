@@ -18,103 +18,22 @@ If we assume that in either case patients would be tapped off uniformly along th
 
 Of these two, the materials and connections for the high pressure distribution aproach are much easier to manage due to their lower weight and bulk and greater flexibility. We'll assume that the target scenario is served by a one inch PVC plenum tapped by ten branches to serve 10 patients each. The size of branch tubing can optionally be reduced. For example, a 50 feet branch of half inch nominal PEX loses 5 psi at 10 CFM / 280 lpm so could potentially serve on the rder of 28 patients.
 
+The provision of pressurized and oxygenated air to the plenum is presently beyond the scope of this project. This problem can presumably be solved using standard compressors appropriate for medical air, pressure regulators, gas analyzers and proportioning valves.
 
-(a branch with 485 Depending on their length and number of connected patients, smaller half inch nominal) PEX (0.481 inch actual) delivers could be sufficient. 
+PEX pipe is available in several colors: red, white, and blue. It might be feasible to implement several plena having different FiO2 levels, for example 40, 60, and 100% and corresponding colors like white blue and red to make it easier to find a desired concentration level.
 
-would be sufficient.
+The patient equipment for scenario 1 should provide the following functionality:
 
-PEX may .
+1) Adjustable inspiration pressure - This pressure regulator should accept oxygenated air with pressures from 25 to 50 PSI and output air at an inspiration pressure that can be adjusted over the range 0 to 45cm H20.
+2) Breathing valve - In the simplest scenario, this valve is an electrical actuator that integrates both the inspiration function and the non-rebreathing functions. When the valve is activated, it connects the patient airway to the pressurized, oxygenated air while simultaneously blocking connection to the PEEP valve. Otherwise, it connects the patient airway to the PEEP valve.
+3) PEEP valve - The PEEP valve provides adjustable minimum airway pressure ranging from 0 to 25 cm H20.
+4) Presure relief valve. The pressure relief valve is aranged to relieve pressure on the patient airway exceeding 50 cm H20 in order to protect the patient lungs from damage if the sytem should fail.
+5) Monitor port. The monitor port provides a two small tubing connections on either side of a minor restriction i the airway. The provide the option to monitor airway pressure and to estimate flow/base on the sensed pressure differential between the ports. Sensors like the Bosch BMP 280 could be used to extend the functionality of the basic dumb ventallator in several important ways: including pressure monitoring, tidal monitoring and more advanced breathing modes including patient initiated breathing.
 
-These branches could optionally have further pressure 
+In the most scalable implmentation, the actuators from multiple patients will be conected together and driven by a single controller such that all patients are forced to the same breathing rate. 
 
-
-
-in 10 lances 
-
-
-allow the pressure to fluctuate between
-
-
-https://www.agorize.com/en/challenges/code-life-challenge
-
-The provision of pressured and oxygenated air is presently beyond the scope of this project. In some circumstances, a shop vac
-
-central air and Central provision and pressure regualtion of the air is Provision 
-a breathing air solenoid and conroller,  prressure apparatus would further regulate the pressure to the therapeutic level for the individual. The patient equipment would , provide gating.
-
-to a controlled level  an in
-
-to local patient taps.
-
-,
-
-In this case, a potential solution is to run one or more ~constant pressure air plena from a centralized source. The air plena could be either low pressure (80cm H20) large diameter (several inches) or higher pressure (~5-50 psi) low diameter (~1 inch). Large diameter options might include four inch PVC pipes with glued connections or sewer main with gasketed connections. (I have seen prohibitions against using PVC in ventilator circuits under ordinary circumstances, but whatever the rationale it may not apply in this dire case.) Smaller diameter pipe could be PVC, copper or PEX. The pipe should be size
-
-
-Aluminum or iron pipe might also be acceptable though less readily sourced. Rapidair provides aluminized shop air tubing that could an alternative.) The pipe should have the capacity to transport breathing air required by hundreds of patients over hundreds of feet without significant pressure loss. Using equipment beyond the scope of this project the main would be centrally pressurized to ~80 cm H20 by medical air and oxygenated to a therapeutic FiO2. The rationale for 80cm H20 is that this pressure level is one suggested level for pressure relief valve setting to prevent barotrauma. If the plenum pressure is below this level, then failure of a patient pressure regulator would be unlikely to cause barotrauma. 
-
-specific  and The main would be pressurized to
-
-
-with glued or gasthat can readily be procured at building stores.
-
-
-
-and there are literally hundreds of patients 
-
-at sufficient scale in 
-
-hundreds of thousand of units be scaled
-This project 
-
-to the degree 
-
-The ventilator is 
-
-
-
-(valtio while protecting the patient against 
-
-oxygen supplemented air 
-
-for ARDS 
-
-provide s only the bare minimum functionality for treatment of ARDS which includes non-rebreathing  most useful functionality for the ARDSThe design(s) support several potential use cases:
-
-1) Controlled FiO2 air is available at ~60 cm H20. In this case, required ventillator functions include pressure modulation, rebreathing mitigation, and PEEP.
-
-modulation of the 
-
-supplied to the blower unit. In this case, the control unit changes blower speed to control volume and pressure over the breathing cucle
-
-the blower modulates breathingblower modulates breathing by 
-
-Medical air and medical oxygen are combined  
-
-1) The patient 
-
-In order to provide maximum flexibility, these componenmultiple assemblies support 3 basic use cases:
-
-1) The 
-
-
-the designs  comprise 3 physical assemblies: 
-
-Y-assembly 
-* Pressure-relief valve
-* Flow and pressure monitor ports
-* Non-rebreathing valve ()
-* Positive-end-expiratory pressure (PEEP) valve
-* Optional
-
-
-
-
-, mixing-valve.
-
-
-
-1) 
-
-
+List of planned improvements for scenario 1:
+* Use an Arduino to provide individually adjustable patient breathing rate and exspiration / inspiration (E/I) ratio. This can be done using any Arduino controller with MOSFET switches.
+* Add a BMP 280 sensor and implement patient initiated breathing.
+* Replace arduino control with Raspberry PI for more advanced functionality. Add tidal volume estimation & pressure / volume versus time graphics.
 
