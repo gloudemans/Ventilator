@@ -57,6 +57,6 @@ It may be desirable to protect the pressure regulator vent from contamination, a
 ![Pressure Regulator][pressure_regulator]
 ![Pressure Gauge][pressure_gauge]
 
-[mixing_valve]: https://github.com/gloudemans/Ventillator/images/Mixing Valve.png"
-[pressure_regulator]: https://github.com/gloudemans/Ventillator/images/Pressure Regulator.png"
-[pressure_gauge]: https://github.com/gloudemans/Ventillator/images/Gauge.png"
+[mixing_valve]: https://github.com/gloudemans/Ventilator/images/Mixing Valve.png"
+[pressure_regulator]: https://github.com/gloudemans/Ventilator/images/Pressure Regulator.png"
+[pressure_gauge]: https://github.com/gloudemans/Ventilator/images/Gauge.png"
