@@ -53,4 +53,10 @@ It may be desirable to protect the pressure regulator vent from contamination, a
 * Might be useful to include a switch that gets pressed with each breath. That switch could be routed to a watchdog timer and report an alarm on timeout.
 * The force produced by a voice coil actuator is a function of the winding geometry and the current. In principal, the coil doesn't use any power unless it is both applying a force and moving at the same time. In practice, maintaining force while not moving incurs I^2R losses, so designing a voice coil actuator is crudely a matter of first figuring out the required winding geometry, number of turns, and current and then sizing wire so that I^2R losses won't excessively heat the wire or consume more than budgeted power from the source than. Of course the geometry and the wire are linked, so there is feedback required to reconcile the two.
 
+![Mixing Valve][mixing_valve]
+![Pressure Regulator][pressure_regulator]
+![Pressure Gauge][pressure_gauge]
 
+[mixing_valve]: https://github.com/gloudemans/Ventillator/images/mixing_valve.png"
+[pressure_regulator]: https://github.com/gloudemans/Ventillator/images/pressure_regulator.png"
+[pressure_gauge]: https://github.com/gloudemans/Ventillator/images/pressure_gauge.png"
